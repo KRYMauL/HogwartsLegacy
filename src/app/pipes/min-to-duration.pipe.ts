@@ -5,10 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true
 })
 export class MinToDurationPipe implements PipeTransform {
-  transform(minutes?: string): string {
+  transform(minutes?: number): string {
     if (!minutes) return '';
-    const hours = Math.floor(+minutes / 60);
-    const min = +minutes % 60;
+    const hours = Math.floor(minutes / 60);
+    const min = minutes % 60;
     return `${hours}h ${min}min`
   }
 }

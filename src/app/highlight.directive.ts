@@ -1,4 +1,4 @@
-import {Directive, HostBinding, HostListener} from '@angular/core';
+import {Directive,HostBinding,HostListener} from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]',
@@ -7,15 +7,15 @@ import {Directive, HostBinding, HostListener} from '@angular/core';
 export class HighlightDirective {
 
   @HostBinding('class.highlight')
-    highlight: boolean = false;
+  highlight: boolean = false;
 
-  @HostListener('mouseenter') onMouseEnter(): void {
+  @HostListener('mouseover')
+  onMouseOver(): void {
     this.highlight = true;
   }
-  @HostListener('mouseleave') onMouseLeave() {
+
+  @HostListener('mouseout')
+  onMouseOut(): void {
     this.highlight = false;
   }
-
-
-
 }
