@@ -1,8 +1,7 @@
-import {Component, inject, Signal} from '@angular/core';
+import {Component} from '@angular/core';
 import {MovieItemComponent} from './movie-item/movie-item.component';
 
 import {HighlightDirective} from './highlight.directive';
-
 import {RouterOutlet} from '@angular/router';
 
 
